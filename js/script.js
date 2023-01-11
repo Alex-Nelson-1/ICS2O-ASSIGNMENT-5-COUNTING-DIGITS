@@ -16,6 +16,21 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function count() {
+  var num = document.getElementById("age").value
+  var number = Number(num)
+  let counter = 0
+  if (Number.isInteger(number) == false) {
+    while (Number.isInteger(number) == false) {
+      number = number * 10
+    }
+  }
+  if (number > 0) {
+    while (number > 0.9999999999999999) {
+    number = number / 10
+    counter++
+    }
+  }
+  document.getElementById("output").innerHTML = " " + counter
 }
+
